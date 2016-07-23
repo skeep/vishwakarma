@@ -2,11 +2,11 @@
  * Created by suman on 20/07/16.
  */
 
+require('babel-core/register');
+
 var webpack = require('webpack');
 var webpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
-
-console.log(__dirname, config.output.publicPath);
+var config = require('./../webpack.config.js').dev;
 
 new webpackDevServer(webpack(config), {
   contentBase: config.output.publicPath,
